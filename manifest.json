@@ -1,6 +1,6 @@
 {
   "manifest_version":3,
-  "name":"Fake Website Blocker",
+  "name":"Phishing Website Blocker",
   "version":"1.0",
   "permissions":[
     "storage",
