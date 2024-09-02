@@ -1,0 +1,38 @@
+{
+  "manifest_version":3,
+  "name":"Fake Website Blocker",
+  "version":"1.0",
+  "permissions":[
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions":[
+    "<all_urls>"
+  ],
+  "background":{
+    "service_worker":"scripts/background.js"
+  },
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["scripts/content.js"]
+    }
+  ],
+  "action":{
+    "default_popup":"popup.html",
+    "default_icon":{
+      "16":"image/icon16.png",
+      "48":"image/icon16.png",
+      "128":"image/icon16.png"
+    }
+  },
+  "declarative_net_request":{
+    "rule_resources":[
+      {
+        "id":"ruleset",
+        "enabled":true,
+        "path":"rules.json"
+      }
+    ]
+  }
+}
