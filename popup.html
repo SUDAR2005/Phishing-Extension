@@ -6,28 +6,89 @@
     <title>Fake Website Blocker</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #bababa, #33db92);
+            color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            width: 400px; 
+            height: 350px;
+            box-sizing: border-box;
         }
-        button {
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        span {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
             padding: 10px;
-            background-color: #4CAF50;
+            margin: 0 auto;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background: #fff;
+            color: black;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 15px;
+            background-color: #28A745;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            width: 80%;
             margin-top: 20px;
+            font-size: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #1E7E34;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h3>Check Current Website</h3>
-    <button id="checkButton">Check Website</button>
-    <div id="result"></div>
+    <div class="container">
+        <h3>Phishing Website Blocker 🧑🏻‍💻!</h3>
+        <span>Stay Cyber Safe</span>
+        <input id="input-box" type="text" placeholder="Enter the Website URL">
+        <button id="checkButton">Check Website</button>
+        <div id="result"></div>
+    </div>
     <script src="scripts/popup.js"></script>
 </body>
 </html>
-
