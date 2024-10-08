@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded',function(){
             console.log("Button clicked");
             chrome.tabs.query({ active: true,currentWindow: true },function(tabs){
                 const activeTab = tabs[0];
-                let activeTabURL = activeTab.url;
+                var activeTabURL = activeTab.url;
                 console.log(activeTab)
-                console.log(activeTab.id)
-                if(document.getElementById("input-box").innerText!==""){
-                        activeTabURL = document.getElementById("input-box").innerText
-                }
+                console.log(activeTab.id)  
                 chrome.runtime.sendMessage({ action: 'checkUrl',url: activeTabURL,id: activeTab.id },function(response){
                     console.log("Response received:",response);
                     const resultDiv = document.getElementById('result');
